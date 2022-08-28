@@ -1,6 +1,8 @@
 import { User } from "./src/models/User";
 
 const user = new User({}, document.getElementById("root"));
-user.attibutes.set({ name: "Hamo" });
+user.set({ id: 2 });
+user.set({ name: "new name" });
+user.save();
 
-user.events.on("click", () => console.log("clicked"));
+user.on("click", () => console.log("clicked"));
